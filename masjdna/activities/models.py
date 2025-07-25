@@ -3,13 +3,12 @@ from django.utils.translation import gettext as _
 
 from masjdna.common.models import AbstractImageLinkField
 from masjdna.common.models import AbstractSiteFK
-from masjdna.common.models import AbstractUUIDField
 from masjdna.common.models import BaseModel
 
 
+# todo: change one image into many images using new Model
 class Activity(
     BaseModel,
-    AbstractUUIDField,
     AbstractSiteFK,
     AbstractImageLinkField,
 ):

@@ -3,7 +3,7 @@ from django.utils.translation import gettext as _
 
 
 class AbstractImageLinkField(models.Model):
-    image_link = models.URLField(
+    image_link = models.ImageField(
         _("image link"),
         unique=True,
         blank=False,

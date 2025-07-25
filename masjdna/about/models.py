@@ -3,13 +3,11 @@ from django.utils.translation import gettext as _
 
 from masjdna.common.models import AbstractImageLinkField
 from masjdna.common.models import AbstractSiteFK
-from masjdna.common.models import AbstractUUIDField
 from masjdna.common.models import BaseModel
 
 
 class About(
     BaseModel,
-    AbstractUUIDField,
     AbstractSiteFK,
     AbstractImageLinkField,
 ):

@@ -3,13 +3,11 @@ from django.utils.translation import gettext as _
 
 from masjdna.common.models import AbstractImageLinkField
 from masjdna.common.models import AbstractSiteFK
-from masjdna.common.models import AbstractUUIDField
 from masjdna.common.models import BaseModel
 
 
 class SocialMedia(
     BaseModel,
-    AbstractUUIDField,
     AbstractSiteFK,
     AbstractImageLinkField,
 ):
@@ -21,4 +19,4 @@ class SocialMedia(
     )
 
     class Meta:
-        verbose_name = _("About")
+        verbose_name = _("Social Media")
