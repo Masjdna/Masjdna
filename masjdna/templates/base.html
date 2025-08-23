@@ -75,7 +75,7 @@
               <a class="nav-link" href="#">Home <span class="visually-hidden">(current)</span></a>
             </li>
             <li class="nav-item">
-              <a class="nav-link" href="{% url 'about' %}">About</a>
+              <a class="nav-link" href="{% url 'about:about_component' %}">About</a>
             </li>
             {% if request.user.is_authenticated %}
               <li class="nav-item">
