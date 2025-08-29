@@ -83,6 +83,7 @@ LOCAL_APPS = [
     "masjdna.users",
     "masjdna.common",
     "masjdna.about",
+    "masjdna.lectures",
     "masjdna.services",
     "masjdna.activities",
     "masjdna.social_media",
@@ -230,7 +231,12 @@ EMAIL_TIMEOUT = 5
 # Django Admin URL.
 ADMIN_URL = "admin/"
 # https://docs.djangoproject.com/en/dev/ref/settings/#admins
-ADMINS = [("""Maamoun Haj Najeeb && Abdulkhalek Muhammed""", "abdulkhalek.muhammad.work@gmail.com")]
+ADMINS = [
+    (
+        """Maamoun Haj Najeeb && Abdulkhalek Muhammed""",
+        "abdulkhalek.muhammad.work@gmail.com",
+    ),
+]
 # https://docs.djangoproject.com/en/dev/ref/settings/#managers
 MANAGERS = ADMINS
 # https://cookiecutter-django.readthedocs.io/en/latest/settings.html#other-environment-settings

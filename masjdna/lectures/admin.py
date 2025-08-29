@@ -1,13 +1,13 @@
 from django.contrib.admin import ModelAdmin
 from django.contrib.admin import site
 
-from .models import Activity
+from .models import Lecture
 
 
-class AcitivityAdmin(ModelAdmin):
+class LectureAdmin(ModelAdmin):
     class Meta:
-        model = Activity
+        model = Lecture
         fields = "__all__"
 
 
-site.register(Activity, AcitivityAdmin)
+site.register(Lecture, LectureAdmin)
