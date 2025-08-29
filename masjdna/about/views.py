@@ -10,12 +10,13 @@ from .models import About
 
 
 def about(request: HttpRequest):
-    about_record = About.objects.get(site=get_current_site(request).id)
-    activities = Activity.objects.filter(site=get_current_site(request).id).order_by(
+    site_id = get_current_site(request).id
+    about_record = About.objects.get(site=site_id)
+    activities = Activity.objects.filter(site=site_id).order_by(
         "-id",
     )[:3]
     lectures = Lecture.objects.all()
-    services_records = Services.objects.filter(site=get_current_site(request).id)
+    services_records = Services.objects.filter(site=site_id)
 
     return render(
         request,
