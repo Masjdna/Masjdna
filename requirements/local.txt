@@ -7,10 +7,10 @@ watchfiles==1.1.0  # https://github.com/samuelcolvin/watchfiles
 
 # Testing
 # ------------------------------------------------------------------------------
-mypy==1.16.1  # https://github.com/python/mypy
-django-stubs[compatible-mypy]==5.2.1  # https://github.com/typeddjango/django-stubs
+mypy==1.17.1  # https://github.com/python/mypy
+django-stubs[compatible-mypy]==5.2.2  # https://github.com/typeddjango/django-stubs
 pytest==8.4.1  # https://github.com/pytest-dev/pytest
-pytest-sugar==1.0.0  # https://github.com/Teemu/pytest-sugar
+pytest-sugar==1.1.1  # https://github.com/Teemu/pytest-sugar
 
 # Documentation
 # ------------------------------------------------------------------------------
@@ -19,10 +19,10 @@ sphinx-autobuild==2024.10.3 # https://github.com/GaretJax/sphinx-autobuild
 
 # Code quality
 # ------------------------------------------------------------------------------
-ruff==0.12.0  # https://github.com/astral-sh/ruff
-coverage==7.9.1  # https://github.com/nedbat/coveragepy
+ruff==0.12.11  # https://github.com/astral-sh/ruff
+coverage==7.10.6  # https://github.com/nedbat/coveragepy
 djlint==1.36.4  # https://github.com/Riverside-Healthcare/djLint
-pre-commit==4.2.0  # https://github.com/pre-commit/pre-commit
+pre-commit==4.3.0  # https://github.com/pre-commit/pre-commit
 
 # Django
 # ------------------------------------------------------------------------------
