@@ -67,10 +67,11 @@
       {% endfor %}
     </div>
     <div class="text-center mt-8">
-      <button class="bg-emerald-600 text-white font-bold py-2 px-6 rounded-full hover:bg-emerald-700 transition duration-300" id="show-more-btn" onclick="toggleServices()">
+      <a href="{% url 'services_app:all_services' %}" class="bg-emerald-600 text-white font-bold py-2 px-6 rounded-full hover:bg-emerald-700 transition duration-300 rounded-full">
         عرض المزيد
-      </button>
+      </a>
     </div>
+
   </section>
 
   <section class="mb-16">
@@ -114,17 +115,22 @@
         </div>
       {% endfor %}
     </div>
-    <div class="text-center mt-8">
+    {% comment %} <div class="text-center mt-8">
       <button class="bg-emerald-600 text-white font-bold py-2 px-6 rounded-full hover:bg-emerald-700 transition duration-300" id="show-more-btn" onclick="toggleServices()">
         عرض المزيد
       </button>
+    </div> {% endcomment %}
+    <div class="text-center mt-8">
+      <a href="{% url 'activities_app:all_activities' %}" class="bg-emerald-600 text-white font-bold py-2 px-6 rounded-full hover:bg-emerald-700 transition duration-300 rounded-full">
+        عرض المزيد
+      </a>
     </div>
   </section>
 
   <section class="mb-16 bg-emerald-50 p-8 rounded-lg shadow-md">
     <div class="grid md:grid-cols-2 gap-8 items-center">
       <div class="rounded-lg overflow-hidden">
-        <img alt="Interior of the Quran Institute" class="w-full h-auto object-cover rounded-lg" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBlul7eNa4bGtXVAV_QBprMosAupTyTZw77q0nOphnFUV1w9wdNsFRB9ZvMdHPATPB2CXuu8mdZX2oNiFPqMRbxA_yLffloxBcIuL6qEMm5qxjT3In8QO3P42jNbXnkXEpvR_ty7dMiC45LstBRZHPvODtCxZF5Pm3495wIqTmGcJvGrIk9p_GiT57c5NQqBHmlVj41jWbe8ZyUCYOo5aHlcEqRVTJnHs0wMd6cpt1ILPACQoyg7wLDQHhO33NJ05uDPCGZDkaagkIU"/>
+        <img alt="Interior of the Quran Institute" class="w-full h-auto object-cover rounded-lg" src="{% static 'images/home/quran_institue.jpg' %}" alt="Logo" />
       </div>
       <div>
         <h2 class="text-3xl font-bold text-emerald-800 mb-4">معهد القرآن الكريم</h2>

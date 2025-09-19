@@ -14,7 +14,7 @@ def about(request: HttpRequest):
     about_record = About.objects.get(site=site_id)
     activities = Activity.objects.filter(site=site_id).order_by("-id")[:3]
     lectures = Lecture.objects.all()
-    services_records = Services.objects.filter(site=site_id)
+    services_records = Services.objects.filter(site=site_id).order_by("-created_at")[:3]
 
     return render(
         request,

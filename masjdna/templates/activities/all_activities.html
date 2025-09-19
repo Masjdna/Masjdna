@@ -1,0 +1,29 @@
+{% include "pages/home.html" %}
+
+{% block content %}
+
+<br>
+
+<section class="mb-16" id="our-activities">
+
+  <h2 class="text-3xl font-bold text-center text-emerald-800 mb-8">النشاطات وآخر الأخبار</h2>
+
+  <br>
+
+  <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+    {% for activity in activities %}
+      <div class="bg-white p-6 rounded-lg shadow-md border-t-4 border-amber-500">
+        <h3 class="text-xl font-bold text-emerald-800 mb-2">{{ activity.header }}</h3>
+        {% comment %} <p class="text-gray-600">{{ activity.activity_description }}</p> {% endcomment %}
+        <img
+          alt="A group of people studying together"
+          class="w-full h-80 object-cover rounded-lg mb-4"
+          src='{{ activity.image_link.url }}'
+        />
+      </div>
+    {% endfor %}
+  </div>
+
+</section>
+
+{% endblock content %}
