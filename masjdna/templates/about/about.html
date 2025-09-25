@@ -1,39 +1,8 @@
+{% include "pages/header.html" %}
+
 {% load static %}
 
-<!DOCTYPE html>
-<html dir="rtl" lang="ar">
-<head>
-  <meta charset="utf-8"/>
-  <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
-  <title>{{ name }}</title>
-  <script src="https://cdn.tailwindcss.com"></script>
-  <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;700&amp;display=swap" rel="stylesheet"/>
-  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet"/>
-  <style>
-    body {
-      font-family: 'Cairo', sans-serif;
-      direction: rtl;
-    }
-  </style>
-</head>
-<body class="bg-emerald-900 bg-opacity-5">
-<header class="bg-white shadow-md">
-  <div class="container mx-auto px-6 py-4 flex justify-between items-center">
-    <h1 class="text-2xl font-bold text-emerald-800"> {{ name }} </h1>
-    <nav class="hidden md:flex space-x-reverse space-x-8">
-      <a class="text-gray-700 hover:text-emerald-600" href="#">الرئيسية</a>
-      <a class="text-gray-700 hover:text-emerald-600" href="#our-services">خدماتنا</a>
-      <a class="text-gray-700 hover:text-emerald-600" href="#our-activities">أنشطتنا</a>
-      <a class="text-gray-700 hover:text-emerald-600" href="#our-donations">تبرع الآن</a>
-      <a class="text-gray-700 hover:text-emerald-600" href="#our-social-media">تواصل معنا</a>
-    </nav>
-    <button class="md:hidden flex items-center">
-      <span class="material-icons">
-        menu
-      </span>
-    </button>
-  </div>
-</header>
+{% block content %}
 
 <main class="container mx-auto px-6 py-12">
 
@@ -130,7 +99,7 @@
   <section class="mb-16 bg-emerald-50 p-8 rounded-lg shadow-md">
     <div class="grid md:grid-cols-2 gap-8 items-center">
       <div class="rounded-lg overflow-hidden">
-        <img alt="Interior of the Quran Institute" class="w-full h-auto object-cover rounded-lg" src="{% static 'images/home/quran_institue.jpg' %}" alt="Logo" />
+        <img alt="Interior of the Quran Institute" class="w-full h-auto object-cover rounded-lg" src="{% static 'images/home/quran_institue.jpg' %}" />
       </div>
       <div>
         <h2 class="text-3xl font-bold text-emerald-800 mb-4">معهد القرآن الكريم</h2>
@@ -190,23 +159,10 @@
   </section>
 
 </main>
-<footer class="bg-emerald-900 text-white py-8">
-  <div class="container mx-auto px-6 text-center" id="our-social-media">
-    <p class="mb-4">تابعنا على وسائل التواصل الاجتماعي</p>
-    <div class="flex justify-center space-x-reverse space-x-6">
-      <a class="hover:text-amber-300" href="">
-      <img alt="Facebook icon" class="w-6 h-6" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCmmjMfXeFwMLdL4i95aK5nqAKMVgqGnpN7VhCvZWGvWzKOE4GgWD0JRvcHy5sM5ajuoW5oxrAjoNHhhY0UUHA6OrlBMDoN2b0Mmx_Li4CmtEy5lLYZdRJ0VJ5eFVN9X6V9q0prjVnEm7YVerY6NstfqKmcXdJtkN_4PHLhQeq1CH6bGnm-6tLj5B9lx_ogd_IiCGbuZEdgzzOvpdJ24OygPTI-_dY3ZCXlCZoZxs9_KJo9Cl3tEdGjCUzrWbmquLNeGSf7KbE7Awih"/>
-      </a>
-      {% comment %} <a class="hover:text-amber-300" href="#">
-      <img alt="Twitter icon" class="w-6 h-6" src="https://lh3.googleusercontent.com/aida-public/AB6AXuC_Ue2wUZOmiHL0auFOzgZoRWkwYMAUuIUSwleqJZdBwALzOlEZXbOrPRONXrG5l8IDgYbSMQ2THDv3_8O-4o2bFyH0EiYXZrzA9FiEKsx0prx0qB3L403cz7K8-81SAWyROC5AweA4937euPxa0AOi-pulVivSVr7-WxMsvjiDOZ_6T63Yk4jvs-6KwUHSm5K907wO1YlbsKdkZBQRwEcxtLEcpqXag8xzt0FRtZBuZ0I-FTD7gqgNyAjO9fYY-89dqgBn-EXdKPVv"/>
-      </a> {% endcomment %}
-      <a class="hover:text-amber-300" href="#">
-        <img alt="ًYouTube icon" class="w-6 h-6" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAB-s42ElJ4eRLz8Zb2M6qNHOXDL49TaZet2pYKVWmd-JGnMNDXmjdxsCfWPWFyPwDufavyFlAcayi5lhPt7WvLiRgEJw22rn7rnuhVyrczPESVuGkeX7hwQKwId4I402heYVuxRbvJuc1K9jzvYRc4Tk84N6j8X_grORqyQcVDgNXciBfDNsRC5t-xTvwRlnIBGkcjvY6SB-ZwHcUGfL2yhP23L6CsgZNnFYyQBkBI0OCFBhQNivg9WJrcdBaHOPBryOPxosP88PTF"/>
-      </a>
-    </div>
-    <p class="mt-8 text-gray-400 text-sm">© 2025 {{ name }}. جميع الحقوق محفوظة.</p>
-  </div>
-</footer>
+
+{% include "pages/footer.html" %}
 
 </body>
 </html>
+
+{% endblock content %}

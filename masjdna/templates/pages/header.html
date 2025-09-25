@@ -1,0 +1,40 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html dir="rtl" lang="ar">
+<head>
+  <meta charset="utf-8"/>
+  <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+  <title>{{ name }}</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;700&amp;display=swap" rel="stylesheet"/>
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet"/>
+  <style>
+    body {
+      font-family: 'Cairo', sans-serif;
+      direction: rtl;
+    }
+  </style>
+</head>
+<body class="bg-emerald-900 bg-opacity-5">
+<header class="bg-white shadow-md">
+  <div class="container mx-auto px-6 py-4 flex justify-between items-center">
+    <h1 class="text-2xl font-bold text-emerald-800"> {{ name }} </h1>
+    <nav class="hidden md:flex space-x-reverse space-x-8">
+      <a class="text-gray-700 hover:text-emerald-600" href="{% url 'about:about_component' %}">الرئيسية</a>
+      <a class="text-gray-700 hover:text-emerald-600" href="{% url 'services_app:all_services' %}">خدماتنا</a>
+      <a class="text-gray-700 hover:text-emerald-600" href="{% url 'activities_app:all_activities' %}">أنشطتنا</a>
+      <a class="text-gray-700 hover:text-emerald-600" href="#our-donations">تبرع الآن</a>
+      <a class="text-gray-700 hover:text-emerald-600" href="#our-social-media">تواصل معنا</a>
+    </nav>
+    <button class="md:hidden flex items-center">
+      <span class="material-icons">
+        menu
+      </span>
+    </button>
+  </div>
+</header>
+
+{% block content %}
+
+{% endblock content %}

@@ -18,7 +18,7 @@ def about(request: HttpRequest):
 
     return render(
         request,
-        template_name="pages/about.html",
+        template_name="about/about.html",
         context={
             "name": get_current_site(request).name,
             "about_overview": about_record.intro,
