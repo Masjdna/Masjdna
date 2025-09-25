@@ -17,3 +17,17 @@ def all_activities(request: HttpRequest):
             "activities": activities,
         },
     )
+
+
+def activity_details(request: HttpRequest, activity_id: int):
+    site_id = get_current_site(request).id
+    activity = Activity.objects.get(id=activity_id, site=site_id)
+
+    return render(
+        request,
+        template_name="activities/activity.html",
+        context={
+            "name": get_current_site(request).name,
+            "activity": activity,
+        },
+    )

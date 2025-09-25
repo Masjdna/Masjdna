@@ -1,0 +1,35 @@
+{% load static %}
+
+{% include "pages/header.html" %}
+
+{% block content %}
+<!-- Content wrapper with margin to separate from header/footer -->
+<div class="flex justify-center items-start min-h-screen bg-gray-50 py-12">
+  <div class="max-w-3xl w-full bg-white p-8 rounded-lg shadow-md border-t-4 border-amber-500">
+
+    <!-- Full width image -->
+    <img
+      alt="Detail image"
+      class="w-full h-auto object-cover rounded-lg mb-6"
+      src="{{ activity.image_link.url }}"
+    />
+
+    <!-- Title -->
+    <h1 class="text-3xl font-bold text-emerald-800 mb-4 text-center">
+      {{ activity.header }}
+    </h1>
+
+    <!-- Description -->
+    <p class="text-gray-700 leading-relaxed mb-6">
+      {{ activity.activity_description }}
+    </p>
+
+    <!-- Created At -->
+    <div class="text-right text-sm text-gray-500">
+      <time>{{ activity.created_at }}</time>
+    </div>
+  </div>
+</div>
+{% endblock content %}
+
+{% include "pages/footer.html" %}
