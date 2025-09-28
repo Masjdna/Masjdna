@@ -1,10 +1,60 @@
-{% extends "base.html" %}
+<!DOCTYPE html>
+<html lang="en"><head>
+  <meta charset="utf-8"/>
+  <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+  <title>500 Server Error</title>
+  <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+  <link href="https://fonts.googleapis.com" rel="preconnect"/>
+  <link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
+  <link href="https://fonts.googleapis.com/css2?family=Public+Sans:wght@400;500;600;700&amp;display=swap" rel="stylesheet"/>
+  <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined" rel="stylesheet"/>
+  <script>
+      tailwind.config = {
+        darkMode: "class",
+        theme: {
+          extend: {
+            colors: {
+              "primary": "#17cf17",
+              "background-light": "#f6f8f6",
+              "background-dark": "#112111",
+            },
+            fontFamily: {
+              "display": ["Public Sans"]
+            },
+            borderRadius: {
+              "DEFAULT": "0.25rem",
+              "lg": "0.5rem",
+              "xl": "0.75rem",
+              "full": "9999px"
+            },
+          },
+        },
+      }
+    </script>
+    <style>
+        .material-symbols-outlined {
+          font-variation-settings:
+          'FILL' 0,
+          'wght' 400,
+          'GRAD' 0,
+          'opsz' 24
+        }
+    </style>
+  </head>
+  <body class="bg-background-light dark:bg-background-dark font-display">
 
-{% block title %}Server Error{% endblock title %}
-{% block content %}
-  <h1>Ooops!!! 500</h1>
-  <h3>Looks like something went wrong!</h3>
-  <p>
-    We track these errors automatically, but if the problem persists feel free to contact us. In the meantime, try refreshing.
-  </p>
-{% endblock content %}
+    <div class="flex flex-col items-center justify-center min-h-screen p-4 text-center">
+      <div class="w-full max-w-md">
+        <div class="mb-6 flex justify-center text-primary">
+        <span class="material-symbols-outlined text-8xl">
+                  error
+                </span>
+        </div>
+      <h1 class="text-3xl md:text-4xl font-bold text-gray-900 dark:text-white mb-4">500 - Server Error</h1>
+      <p class="text-lg text-gray-700 dark:text-gray-300 mb-2">Oops! Something went wrong on our end.</p>
+      <p class="text-gray-600 dark:text-gray-400 mb-8">We're experiencing a temporary issue. Please try refreshing the page, or check back in a little while.</p>
+      </div>
+    </div>
+
+  </body>
+</html>

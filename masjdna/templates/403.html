@@ -1,13 +1,78 @@
-{% extends "base.html" %}
+<!DOCTYPE html>
+<html lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>لا تملك الصلاحيات</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com" rel="preconnect"/>
+<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
+<link href="https://fonts.googleapis.com/css2?family=Public+Sans:wght@400;500;700;900&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined" rel="stylesheet"/>
+<script>
+    tailwind.config = {
+      darkMode: "class",
+      theme: {
+        extend: {
+          colors: {
+            "primary": "#17cf17",
+            "background-light": "#f6f8f6",
+            "background-dark": "#112111",
+          },
+          fontFamily: {
+            "display": ["Public Sans"]
+          },
+          borderRadius: {
+            "DEFAULT": "0.25rem",
+            "lg": "0.5rem",
+            "xl": "0.75rem",
+            "full": "9999px"
+          },
+        },
+      },
+    }
+  </script>
+</head>
+<body class="font-display bg-background-light dark:bg-background-dark text-neutral-800 dark:text-neutral-200">
+<div class="flex flex-col min-h-screen">
+<header class="border-b border-primary/20 dark:border-primary/30">
+<div class="container mx-auto px-4 sm:px-6 lg:px-8">
+<div class="flex items-center justify-between h-16">
+  <div class="flex items-center gap-4">
+    <svg class="h-8 w-8 text-primary" fill="none" viewBox="0 0 48 48" xmlns="http://www.w3.org/2000/svg">
+    <g clip-path="url(#clip0_6_330)">
+    <path clip-rule="evenodd" d="M24 0.757355L47.2426 24L24 47.2426L0.757355 24L24 0.757355ZM21 35.7574V12.2426L9.24264 24L21 35.7574Z" fill="currentColor" fill-rule="evenodd"></path>
+    </g>
+    <defs>
+    <clipPath id="clip0_6_330">
+    <rect fill="white" height="48" width="48"></rect>
+    </clipPath>
+    </defs>
+    </svg>
+    <h1 class="text-xl font-bold text-neutral-900 dark:text-white">Masjdna</h1>
+  </div>
+</div>
+</header>
+<main class="flex-grow flex items-center justify-center">
+<div class="text-center p-8 max-w-lg w-full">
+<div class="inline-flex items-center justify-center h-24 w-24 rounded-full bg-primary/20 mb-8">
+<span class="material-symbols-outlined text-primary text-6xl">
+                lock
+            </span>
+</div>
+<h2 class="text-4xl font-extrabold text-neutral-900 dark:text-white mb-4">لا تملك الصلاحيات المطلوبة</h2>
+<p class="text-lg text-neutral-600 dark:text-neutral-400 mb-8">
+لا تملك الصلاحيات اسمهاللوصول إلى هذه الصفحة. يرجى الاتصال بالمسؤول أو تسجيل الدخول باستخدام بيانات الاعتماد المناسبة إذا كنت تعتقد أن هذا خطأ
+</p>
+<div class="flex items-center justify-center gap-4">
+  <a class="inline-flex items-center justify-center rounded-lg bg-primary px-5 py-3 text-sm font-medium text-white shadow-sm transition-transform hover:scale-105 focus:outline-none focus:ring-2 focus:ring-primary focus:ring-offset-2 dark:focus:ring-offset-background-dark" href="https://abibakralseddeq.masjdna.com/">
+    مسجد أبي بكر الصديق
+  </a>
+  <a class="inline-flex items-center justify-center rounded-lg bg-primary px-5 py-3 text-sm font-medium text-white shadow-sm transition-transform hover:scale-105 focus:outline-none focus:ring-2 focus:ring-primary focus:ring-offset-2 dark:focus:ring-offset-background-dark" href="https://abibakralseddeq.masjdna.com/">
+    مسجد قباء بالهرم
+  </a>
+</div>
+</div>
+</main>
+</div>
 
-{% block title %}Forbidden (403){% endblock title %}
-{% block content %}
-  <h1>Forbidden (403)</h1>
-  <p>
-    {% if exception %}
-      {{ exception }}
-    {% else %}
-      You're not allowed to access this page.
-    {% endif %}
-  </p>
-{% endblock content %}
+</body></html>
