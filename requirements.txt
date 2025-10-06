@@ -67,7 +67,7 @@ tomli_w==1.2.0
 tomlkit==0.13.2
 trove-classifiers==2025.3.19.19
 -e git+https://github.com/overhangio/tutor@6a87af76b9244ce9a954f424aa17cbaa13c91e3a#egg=tutor
-types-python-dateutil==2.9.0.20250516
+types-python-dateutil==2.9.0.20250822
 typing_extensions==4.13.1
 tzdata==2024.2
 urllib3==2.3.0
